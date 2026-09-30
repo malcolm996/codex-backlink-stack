@@ -1,9 +1,9 @@
 # 给另一台 Codex 的安装提示词
 
-将下面整段复制给另一台电脑的 Codex，并把 `<仓库地址>` 替换成这个 GitHub 仓库的公开 URL：
+将下面整段复制给另一台电脑的 Codex：
 
 ```text
-请从这个 GitHub 仓库安装并配置我的外链工作流：<仓库地址>
+请从这个 GitHub 仓库安装并配置我的外链工作流：https://github.com/malcolm996/codex-backlink-stack
 
 需要安装的 Codex skills：
 1. skills/backlink-copywriter
@@ -29,4 +29,3 @@
 
 安装完成后，请报告：三个 skill 是否可用、bridge 健康检查结果、Chrome 扩展是否加载，以及 Feishu 是否仍待配置。不要执行真实外链提交，除非我另行明确授权。
 ```
-
