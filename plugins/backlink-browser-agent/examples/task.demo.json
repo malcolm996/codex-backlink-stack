@@ -1,0 +1,20 @@
+{
+  "version": "1.0",
+  "type": "domain.backlink_metrics.collect",
+  "provider": "local-demo",
+  "input": {
+    "domain": "example.com",
+    "scope": "domain",
+    "entryUrl": "http://127.0.0.1:17831/demo/"
+  },
+  "limits": { "maxPages": 2, "maxRecords": 20 },
+  "execution": { "mode": "quiet", "manualSubmit": true },
+  "capture": {
+    "captureUrlPatterns": ["/demo/api/backlinks"],
+    "recordsPath": "data.records",
+    "inputSelector": "#domain",
+    "submitSelector": "#search",
+    "nextSelector": "#next",
+    "settleMs": 1000
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "host": "127.0.0.1",
+  "port": 17831,
+  "token": "replace-with-a-long-random-token",
+  "leaseSeconds": 120,
+  "dailyOverviewLimit": 10,
+  "feishu": {
+    "enabled": false,
+    "baseUrl": "https://open.feishu.cn/open-apis",
+    "targetType": "spreadsheet",
+    "appId": "",
+    "appSecret": "",
+    "spreadsheetToken": "",
+    "sheetId": "",
+    "bitableAppToken": "",
+    "bitableTableId": ""
+  }
+}

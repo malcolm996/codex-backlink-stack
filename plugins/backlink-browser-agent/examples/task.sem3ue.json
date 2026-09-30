@@ -1,0 +1,18 @@
+{
+  "version": "1.0",
+  "type": "domain.backlink_metrics.collect",
+  "provider": "semrush-via-3ue",
+  "input": {
+    "domain": "aireel.net",
+    "scope": "domain",
+    "page": 1
+  },
+  "limits": {
+    "maxPages": 1,
+    "maxRecords": 100
+  },
+  "execution": {
+    "mode": "quiet",
+    "manualSubmit": true
+  }
+}

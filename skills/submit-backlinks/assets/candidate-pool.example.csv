@@ -1,0 +1,2 @@
+platform,opportunity_url,source,source_url,submission_url,route_type,contact,competitor_source,authority_metric,authority_value,observed_at,notes
+Example Directory,https://directory.example/products,user-pool,https://source.example/list,,directory,,,,,2026-01-01,Replace this example row

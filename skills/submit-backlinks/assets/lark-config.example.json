@@ -1,0 +1,22 @@
+{
+  "base_token_env": "BACKLINK_LARK_BASE_TOKEN",
+  "table_id_env": "BACKLINK_LARK_TABLE_ID",
+  "identity": "user",
+  "field_map": {
+    "attempt_id": "Attempt ID",
+    "site_name": "Site",
+    "site_url": "Site URL",
+    "submitted_url": "Submitted URL",
+    "platform": "Platform",
+    "platform_url": "Platform URL",
+    "classification": "Classification",
+    "status": "Status",
+    "evidence_type": "Evidence Type",
+    "evidence_url": "Evidence URL",
+    "requires_reciprocal": "Requires Reciprocal",
+    "reciprocal_added": "Reciprocal Added",
+    "link_attr": "Link Attribute",
+    "recorded_at": "Recorded At",
+    "notes": "Notes"
+  }
+}

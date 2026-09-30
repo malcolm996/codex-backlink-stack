@@ -1,0 +1,4 @@
+interface:
+  display_name: "Submit Backlinks"
+  short_description: "Guided backlink discovery, qualification, and execution"
+  default_prompt: "Use $submit-backlinks with the local backlink-browser-agent bridge for Semrush collection, hand comment copy to $backlink-copywriter, and execute only authorized qualified submissions."

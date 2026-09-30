@@ -1,0 +1,16 @@
+{
+  "version": "1.0",
+  "type": "candidate.comment.check",
+  "provider": "comment-page",
+  "input": {
+    "sourceUrl": "https://example.com/article"
+  },
+  "limits": {
+    "maxPages": 1,
+    "maxRecords": 0
+  },
+  "execution": {
+    "mode": "quiet",
+    "manualSubmit": true
+  }
+}

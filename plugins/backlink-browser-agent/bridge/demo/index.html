@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Backlink Agent Demo</title>
+  <style>
+    body{font-family:system-ui,sans-serif;max-width:920px;margin:40px auto;padding:0 20px;color:#172033}
+    form{display:flex;gap:10px} input{flex:1;padding:10px} button{padding:10px 16px}
+    table{width:100%;border-collapse:collapse;margin-top:20px} th,td{padding:8px;border-bottom:1px solid #ddd;text-align:left}
+    #status{margin:16px 0;color:#506080}.pager{margin-top:16px;display:flex;gap:10px}
+  </style>
+</head>
+<body>
+  <h1>本地拦截演示</h1>
+  <form id="query-form">
+    <input id="domain" name="domain" placeholder="example.com" autocomplete="off">
+    <button id="search" type="submit">查询</button>
+  </form>
+  <div id="status">等待查询</div>
+  <table><thead><tr><th>来源页面</th><th>目标 URL</th><th>锚文本</th><th>DoFollow</th></tr></thead><tbody id="rows"></tbody></table>
+  <div class="pager"><button id="next" disabled>下一页</button></div>
+  <script>
+    let page = 1;
+    let domain = '';
+    async function loadPage(nextPage) {
+      page = nextPage;
+      document.querySelector('#status').textContent = '加载中…';
+      const response = await fetch('/demo/api/backlinks?domain=' + encodeURIComponent(domain) + '&page=' + page);
+      const payload = await response.json();
+      document.querySelector('#rows').innerHTML = payload.data.records.map(function(r) {
+        return '<tr><td>' + r.sourceUrl + '</td><td>' + r.targetUrl + '</td><td>' + r.anchor + '</td><td>' + r.dofollow + '</td></tr>';
+      }).join('');
+      document.querySelector('#status').textContent = '第 ' + payload.data.page + ' / ' + payload.data.totalPages + ' 页';
+      document.querySelector('#next').disabled = payload.data.page >= payload.data.totalPages;
+    }
+    document.querySelector('#query-form').addEventListener('submit', function(event) {
+      event.preventDefault();
+      domain = document.querySelector('#domain').value.trim();
+      if (domain) loadPage(1);
+    });
+    document.querySelector('#next').addEventListener('click', function() { loadPage(page + 1); });
+  </script>
+</body>
+</html>
+

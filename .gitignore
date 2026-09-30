@@ -1,0 +1,15 @@
+# Local credentials and runtime state
+**/config.local.json
+**/generated_config.js
+**/bridge/data/*.json
+**/bridge/data/*.jsonl
+**/captures/
+**/chrome-profile/
+**/pack-profile/
+**/tools/
+**/*.crx
+**/*.pem
+**/__pycache__/
+**/*.pyc
+skills/backlink-copywriter/.git/
+*.log

@@ -1,0 +1,25 @@
+{
+  "manifest_version": 3,
+  "name": "Backlink Browser Agent",
+  "version": "0.1.0",
+  "description": "Quiet, user-authorized browser task runner for backlink research.",
+  "permissions": ["storage", "tabs", "scripting", "alarms", "notifications"],
+  "host_permissions": ["http://127.0.0.1/*", "http://localhost/*", "https://sem.3ue.co/*"],
+  "optional_host_permissions": ["https://*/*"],
+  "background": { "service_worker": "background.js", "type": "module" },
+  "action": { "default_title": "Backlink Browser Agent", "default_popup": "popup.html" },
+  "options_page": "options.html",
+  "content_scripts": [
+    {
+      "matches": ["https://sem.3ue.co/*"],
+      "js": ["main_world.js"],
+      "run_at": "document_start",
+      "world": "MAIN"
+    },
+    {
+      "matches": ["https://sem.3ue.co/*"],
+      "js": ["content_bridge.js"],
+      "run_at": "document_start"
+    }
+  ]
+}

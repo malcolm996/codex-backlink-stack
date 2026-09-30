@@ -1,0 +1,24 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://local.backlink-agent/schemas/result.schema.json",
+  "title": "Backlink Browser Agent Result",
+  "type": "object",
+  "required": ["version", "status", "provider", "completedAt", "records"],
+  "properties": {
+    "version": { "const": "1.0" },
+    "taskId": { "type": "string" },
+    "status": { "enum": ["completed", "failed", "manual_required"] },
+    "provider": { "type": "string" },
+    "sourceUrl": { "type": "string" },
+    "completedAt": { "type": "string", "format": "date-time" },
+    "manual_required": { "type": "boolean" },
+    "records": { "type": "array" },
+    "captures": { "type": "array" },
+    "normalizedDomain": { "type": "string" },
+    "overview": { "type": "object" },
+    "qualification": { "type": "object" },
+    "queryLedger": { "type": "object" },
+    "commentAnalysis": { "type": "object" },
+    "rawCommentSnapshotOmitted": { "type": "boolean" }
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "site_name": "Example Product",
+  "site_url": "https://example.com",
+  "page_name": "Example Product homepage",
+  "page_url": "https://example.com",
+  "page_type": "homepage",
+  "category": "software",
+  "audience": "Describe the intended audience",
+  "language_market": "English / Global",
+  "tagline": "One-line product promise",
+  "short_description": "A concise product description.",
+  "long_description": "A reusable long description for directory and launch submissions.",
+  "keywords": [
+    "example keyword"
+  ],
+  "contact_name": "",
+  "contact_email": "",
+  "logo": "",
+  "screenshots": [],
+  "social_url": "",
+  "target_count": 10,
+  "allow_paid": false,
+  "reciprocal_policy": "review_required",
+  "execution_policy": "ask_once_then_continue",
+  "google_oauth_policy": "ask_once",
+  "authorized_google_account": "",
+  "seo_source_policy": "local_browser_agent_first",
+  "preferred_seo_provider": "semrush-via-3ue",
+  "browser_agent_bridge": "http://127.0.0.1:17831",
+  "inspect_candidates": true,
+  "remember_provider_after_success": true
+}

@@ -1,0 +1,11 @@
+bridge/config.local.json
+bridge/data/*.json
+bridge/data/*.jsonl
+!bridge/data/.gitkeep
+extension/generated_config.js
+*.log
+extension.crx
+extension.pem
+tools/
+chrome-profile/
+pack-profile/

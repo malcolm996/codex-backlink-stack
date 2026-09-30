@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Backlink Browser Agent 设置</title>
+  <link rel="stylesheet" href="options.css">
+</head>
+<body><main>
+  <h1>Backlink Browser Agent</h1>
+  <p class="hint">默认静默运行。仅授权你实际使用的第三方工具站点。</p>
+  <section><h2>本地桥接</h2>
+    <label>桥接地址<input id="bridgeUrl"></label>
+    <label>本地令牌<input id="token" type="password"></label>
+    <button id="testBridge" type="button">测试桥接</button>
+  </section>
+  <section><h2>目标站点</h2>
+    <label>登录后的入口 URL<input id="providerEntryUrl" placeholder="https://tool.example.com/backlinks"></label>
+    <button id="grant" type="button">授权此站点</button>
+  </section>
+  <section><h2>页面操作</h2>
+    <label>域名输入框 CSS 选择器<input id="inputSelector"></label>
+    <label>查询按钮 CSS 选择器<input id="submitSelector"></label>
+    <label>下一页按钮 CSS 选择器<input id="nextSelector"></label>
+    <label>每页等待毫秒<input id="settleMs" type="number" min="300"></label>
+    <label>最多页数<input id="maxPages" type="number" min="1"></label>
+  </section>
+  <section><h2>响应拦截</h2>
+    <label>响应 URL 特征（每行一个）<textarea id="captureUrlPatterns" rows="5"></textarea></label>
+    <label>记录数组路径<input id="recordsPath" placeholder="data.records"></label>
+  </section>
+  <section><h2>候选页检测</h2>
+    <label><input id="inspectCandidates" type="checkbox"> 自动检查来源页评论区</label>
+    <label>最多检查来源页<input id="maxCandidatePages" type="number" min="0" max="200"></label>
+    <button id="grantCandidates" type="button">授权候选页检测</button>
+    <p class="hint">检查评论表单、评论活跃度、已有链接、链接位置、验证码和登录阻断，并计算综合评分。</p>
+  </section>
+  <section class="checks">
+    <label><input id="quietMode" type="checkbox"> 静默运行</label>
+    <label><input id="dedicatedWindow" type="checkbox"> 使用专用最小化窗口</label>
+  </section>
+  <div class="actions"><button id="save" type="button">保存设置</button><span id="status"></span></div>
+</main><script type="module" src="options.js"></script></body></html>
