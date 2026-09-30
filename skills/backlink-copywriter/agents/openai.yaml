@@ -1,0 +1,7 @@
+interface:
+  display_name: "Backlink Copywriter"
+  short_description: "Write contextual backlink comments and forum replies"
+  default_prompt: "Use $backlink-copywriter to draft contextual backlink comments from the supplied article and target-page brief."
+
+policy:
+  allow_implicit_invocation: false
